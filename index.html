@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI-Автоматизация за 60 минут — Ger Dennis AI</title>
+  <meta name="description" content="10 готовых схем автоматизации (Make + Telegram + AI). Забирай чек-лист и запускай первую автоматизацию уже сегодня." />
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#0f1722; --muted:#9fb0c3; --text:#e7eef7;
+      --line:rgba(255,255,255,.10); --accent:#7c4dff; --accent2:#00e5ff;
+      --good:#22c55e; --warn:#f59e0b;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Inter,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(900px 500px at 20% 0%, rgba(124,77,255,.20), transparent 60%),radial-gradient(900px 500px at 90% 20%, rgba(0,229,255,.16), transparent 60%),var(--bg);color:var(--text);}
+    a{color:inherit}
+    .wrap{max-width:980px;margin:0 auto;padding:20px 16px 64px}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 10px 30px rgba(124,77,255,.25)}
+    .brand b{letter-spacing:.4px}
+    .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.02)}
+    .chip input{width:220px;max-width:48vw;background:transparent;border:0;color:var(--text);outline:none}
+    .chip small{color:var(--muted)}
+    .hero{margin-top:22px;border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border-radius:18px;padding:22px}
+    h1{margin:0 0 10px;font-size:34px;line-height:1.12}
+    .sub{color:var(--muted);font-size:16px;line-height:1.5}
+    .grid{display:grid;grid-template-columns:1.4fr .9fr;gap:14px;margin-top:16px}
+    .card{border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:16px;padding:16px}
+    .bullets{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+    .bullets li{display:flex;gap:10px;align-items:flex-start}
+    .dot{margin-top:4px;width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+    .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .btn{appearance:none;border:0;cursor:pointer;border-radius:14px;padding:12px 14px;font-weight:700}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#071019;box-shadow:0 10px 30px rgba(124,77,255,.22)}
+    .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--text)}
+    .mini{color:var(--muted);font-size:12px;margin-top:10px}
+    h2{font-size:18px;margin:0 0 10px}
+    .cols{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .pill{border:1px solid var(--line);background:rgba(255,255,255,.02);border-radius:14px;padding:12px}
+    .pill b{display:block;margin-bottom:6px}
+    .pill small{color:var(--muted);line-height:1.35}
+    .list{margin:0;padding-left:18px;color:var(--muted);line-height:1.6}
+    .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+    .kpi .pill{padding:14px}
+    .kpi b{font-size:20px}
+    .faq details{border:1px solid var(--line);border-radius:14px;padding:12px;background:rgba(255,255,255,.02)}
+    .faq details+details{margin-top:10px}
+    .faq summary{cursor:pointer;font-weight:700}
+    .faq p{color:var(--muted);margin:10px 0 0;line-height:1.55}
+    .footer{margin-top:16px;color:var(--muted);font-size:13px;line-height:1.6}
+    .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .tag{border:1px solid var(--line);padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.02);text-decoration:none}
+    @media (max-width:840px){.grid{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.kpi{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <b>GER DENNIS AI</b><br/>
+          <small style="color:var(--muted)">Tripwire MVP • быстрый старт</small>
+        </div>
+      </div>
+
+      <div class="chip" title="Можно быстро заменить ссылку оплаты и кодовое слово прямо тут (в браузере).">
+        <small>Оплата:</small>
+        <input id="pay" value="REPLACE_WITH_PAYMENT_LINK" />
+      </div>
+    </div>
+
+    <div class="hero">
+      <h1>AI-Автоматизация за 60 минут: 10 готовых схем</h1>
+      <div class="sub">
+        Для экспертов, блогеров и малого бизнеса: <b>контент → Telegram → заявки → продажи</b> без хаоса и “теории ради теории”.
+        Получи готовые схемы + чек-лист, чтобы запустить первую автоматизацию <b>уже сегодня</b>.
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h2>Что ты получишь</h2>
+          <ul class="bullets">
+            <li><span class="dot"></span><span><b>10 схем</b> автоматизации (Make + Telegram + AI) — копируй и применяй.</span></li>
+            <li><span class="dot"></span><span><b>Шаблоны сообщений</b> для лид-магнита и дожима (5 сообщений на 24 часа).</span></li>
+            <li><span class="dot"></span><span><b>Контент-конвейер 30 дней</b> с A/B-идеями заголовков и CTA.</span></li>
+            <li><span class="dot"></span><span><b>Human-in-the-loop</b>: AI готовит черновики, ты подтверждаешь — всё белыми методами.</span></li>
+          </ul>
+
+          <div class="btns">
+            <button class="btn primary" onclick="goPay()">Купить (9–19€) →</button>
+            <button class="btn ghost" onclick="goTG()">Забрать лид-магнит в Telegram</button>
+          </div>
+          <div class="mini">
+            Кодовое слово для Telegram: <b id="codeWord">СХЕМА</b> • Напиши в TG: “СХЕМА” — получишь чек-лист.
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Для кого / не для кого</h2>
+          <div class="cols">
+            <div class="pill">
+              <b>Подходит</b>
+              <small>Экспертам, блогерам, предпринимателям: нужно больше подписчиков, заявок и продаж — и меньше рутины.</small>
+            </div>
+            <div class="pill">
+              <b>Не подходит</b>
+              <small>Тем, кто ищет “серые схемы”: накрутки, спам, обходы капч. Здесь — только белая воронка.</small>
+            </div>
+          </div>
+
+          <h2 style="margin-top:14px">Результат</h2>
+          <div class="kpi">
+            <div class="pill"><b>+скорость</b><small>производство контента быстрее ×2–×5</small></div>
+            <div class="pill"><b>+конверсия</b><small>контент → подписка → лид → покупка</small></div>
+            <div class="pill"><b>–рутина</b><small>минимум ручных действий, максимум повторяемости</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top:14px">
+      <div class="card">
+        <h2>Что внутри (10 схем)</h2>
+        <ol class="list">
+          <li>Новый лид в Telegram → запись в Google Sheet → уведомление тебе</li>
+          <li>Кодовое слово → выдача лид-магнита + тег “лид-магнит”</li>
+          <li>5-сообщений дожима за 24 часа (таймеры)</li>
+          <li>Контент-идеи → сценарий → постинг-чеклист</li>
+          <li>Комментарии → сбор болей → идеи новых роликов</li>
+          <li>Заявка → квалификация → запись на консультацию</li>
+          <li>Оплата → автоматическая выдача материалов</li>
+          <li>Еженедельный отчёт по контенту и конверсии</li>
+          <li>A/B заголовки/CTA (ручной быстрый тест)</li>
+          <li>Мини-CRM в таблице (статусы лидов)</li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <h2>Как получить (3 шага)</h2>
+        <ol class="list">
+          <li>Нажми “Купить” и оплати (или напиши “СХЕМА” в Telegram)</li>
+          <li>Получишь материалы + инструкции (mobile-first)</li>
+          <li>Запусти 1 схему сегодня → дальше масштабируем</li>
+        </ol>
+
+        <div class="btns">
+          <button class="btn primary" onclick="goPay()">Оплатить сейчас</button>
+          <button class="btn ghost" onclick="copyWord()">Скопировать кодовое слово</button>
+        </div>
+
+        <div class="footer">
+          <b>Контакты / ссылки</b>
+          <div class="links">
+            <a class="tag" href="https://t.me/ger_dennis_ai" target="_blank" rel="noreferrer">Telegram</a>
+            <a class="tag" href="https://youtube.com/@ger_dennis_ai?feature=shared" target="_blank" rel="noreferrer">YouTube</a>
+            <a class="tag" href="https://www.instagram.com/ger_dennis_ai/" target="_blank" rel="noreferrer">Instagram</a>
+            <a class="tag" href="https://ger-dennis-ai-ai–skbrxy4.gamma.site/" target="_blank" rel="noreferrer">Portfolio</a>
+          </div>
+          <div style="margin-top:10px">
+            👉 Те, кто читает этот канал, завтра будут давать работу тем, кто его проигнорировал. Подписывайся и будь на шаг впереди.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card faq" style="margin-top:14px">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Я новичок. У меня получится?</summary>
+        <p>Да. Внутри — пошаговые схемы и “human-in-the-loop”: AI готовит, ты подтверждаешь. Начни с 1 схемы.</p>
+      </details>
+      <details>
+        <summary>Это серые методы? Меня забанят?</summary>
+        <p>Нет. Только белые сценарии: контент, лид-магнит, честный дожим, уведомления, таблицы, CRM.</p>
+      </details>
+      <details>
+        <summary>Сколько времени займёт?</summary>
+        <p>Первую схему можно запустить за 30–60 минут. Дальше — расширяем.</p>
+      </details>
+      <details>
+        <summary>Где ссылка оплаты?</summary>
+        <p>Вверху страницы поле “Оплата”. Вставь свою ссылку (Stripe/PayPal/GetCourse) и закоммить изменения в GitHub.</p>
+      </details>
+    </div>
+  </div>
+
+  <script>
+    const TG = "https://t.me/ger_dennis_ai";
+    function goPay(){
+      const url = document.getElementById('pay').value.trim();
+      if(!url || url.includes("REPLACE_WITH_PAYMENT_LINK")){
+        alert("Вставь ссылку оплаты: открой index.html в GitHub → Edit → замени REPLACE_WITH_PAYMENT_LINK → Commit.");
+        return;
+      }
+      window.open(url, "_blank");
+    }
+    function goTG(){
+      window.open(TG, "_blank");
+    }
+    function copyWord(){
+      const word = document.getElementById('codeWord').innerText;
+      navigator.clipboard.writeText(word).then(()=>alert("Скопировано: " + word));
+    }
+  </script>
+</body>
+</html>
